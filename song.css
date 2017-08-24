@@ -1,4 +1,5 @@
-*::before,*::after{
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -11,48 +12,93 @@
     }
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     height: 100vh;
     background: transparent url(http://p3.music.126.net/Uc7F9HINTUQOTMFMe7RiEA==/18301371044867289.jpg) no-repeat center center;
     background-size: cover;
 }
-.disc-container{
 
-}
-.disc-container .pointer{
+.disc-container {}
+
+.disc-container .pointer {
     position: relative;
 }
-.disc-container .pointer img{
+
+.disc-container .pointer img {
     width: 1.65rem;
     position: absolute;
     left: calc(50% - 0.3rem);
     z-index: 1;
 }
+
 .disc-container .disc {
     margin-top: 1.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: circle 20s infinite linear;
+    
     z-index: 0;
 }
-.disc-container .disc .ring{
+.disc-container .active{
+    animation: circle 20s infinite linear;
+}
+
+.disc-container .disc .ring {
     width: 5.13rem;
 }
-.disc-container .disc .light{
+
+.disc-container .disc .light {
     width: 5.13rem;
     position: absolute;
 }
-.disc-container .disc .cover{
+
+.disc-container .disc .cover {
     width: 3.2rem;
     position: absolute;
     border-radius: 50%;
 }
-.description{
 
+.description {
+    flex-grow: 1;
+    margin-top: 0.36rem;
+    text-align: center;
+    color: #aeabac;
 }
-.container .links{
 
+.description h1 {
+    font-size: 0.33rem;
+    font-weight: 100;
+}
+
+.description .lyric {
+    height: 1.3rem;
+    overflow: hidden;
+}
+
+.description p {
+    font-size: 0.253rem;
+    line-height: 0.435rem;
+}
+
+.container .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.container .links a{
+    margin: 0.29rem;
+    padding: 0.18rem;
+    border: 0.01rem solid #d43b32;
+    border-radius: 0.0725rem;
+    width: 2.5rem;
+    letter-spacing: 0.11rem;
+    color: #d43b32;
+    font-size: 0.253rem;
+}
+.container .links .download{
+    color: #fff;
+    background-color: #d43b32
 }
