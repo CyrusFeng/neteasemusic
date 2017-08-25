@@ -41,6 +41,7 @@
     
     z-index: 0;
     position: relative;
+    height: 5.13rem;
 }
 .disc-container .disc.active .light,
 .disc-container .disc.active .cover{
@@ -53,6 +54,7 @@
     position: absolute;
     top: calc(50% - 0.5rem);
     left: calc(50% - 0.5rem);
+    z-index: 2;
     fill:white;
     display: none;
     width: 1rem;
@@ -66,6 +68,10 @@
 } */
 .disc-container .disc .ring {
     width: 5.13rem;
+    position: absolute;
+    top: calc(50% - 2.565rem);
+    left: calc(50% - 2.565rem);
+    z-index: 1;
 }
 
 .disc-container .disc .light {
@@ -73,6 +79,7 @@
     position: absolute;
     top: calc(50% - 2.565rem);
     left: calc(50% - 2.565rem);
+    z-index: 1;
 }
 
 .disc-container .disc .cover {
@@ -81,6 +88,7 @@
     border-radius: 50%;
     top: calc(50% - 1.6rem);
     left: calc(50% - 1.6rem);
+    z-index: 1;
 }
 
 .description {
