@@ -51,9 +51,12 @@
     }
 .disc-container .disc .icon{
     position: absolute;
+    top: calc(50% - 0.5rem);
+    left: calc(50% - 0.5rem);
     fill:white;
     display: none;
     width: 1rem;
+    height: 1rem;
 }
 /* .disc-container .disc .icon-pause{
     display: block;
@@ -68,12 +71,16 @@
 .disc-container .disc .light {
     width: 5.13rem;
     position: absolute;
+    top: calc(50% - 2.565rem);
+    left: calc(50% - 2.565rem);
 }
 
 .disc-container .disc .cover {
     width: 3.2rem;
     position: absolute;
     border-radius: 50%;
+    top: calc(50% - 1.6rem);
+    left: calc(50% - 1.6rem);
 }
 
 .description {
