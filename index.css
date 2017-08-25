@@ -1,16 +1,152 @@
-header{
-
+section>h2 {
+    position: relative;
+    padding-left: 0.163rem;
+    margin-top: 0.254rem;
+    margin-bottom: 0.254rem;
+    font-size: 0.31rem;
+    line-height: 1;
+    /* height: 0.36rem; */
+    font-weight: normal;
 }
 
-nav{
+section>h2::after {
+    content: '';
+    height: 100%;
+    border-right: 3px solid rgb(212, 60, 51);
+    position: absolute;
+    left: 0;
+}
 
+header {
+    padding: 0.4rem 0.18rem;
+    background-color: rgb(212, 60, 51);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.playlists{
 
+header .topsvg {
+    width: 2.57rem;
 }
-.latestmusic{
 
+header a {
+    display: inline-block;
+    height: 0.5434rem;
+    line-height: 0.5434rem;
+    padding: 0 0.181rem;
+    color: #fff;
+    font-size: 0.27rem;
+    border: 0.018rem solid #fff;
+    border-radius: 0.27rem;
 }
-footer{
-    
+
+nav ol {
+    display: flex;
+    border-bottom: 0.018rem solid #ccc;
 }
+
+nav ol li {
+    text-align: center;
+    flex: 1;
+    font-size: 0.27rem;
+}
+
+nav ol li.active {
+    color: rgb(212, 60, 51);
+}
+
+nav ol li span {
+    padding: 0 0.09rem;
+    display: inline-block;
+    line-height: 0.725rem;
+    position: relative;
+}
+
+nav ol li.active span::after {
+    content: '';
+    border-top: 0.04rem solid rgb(212, 60, 51);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.playlists {
+    margin-top: 0.4rem;
+}
+
+.playlists ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.playlists ul li {
+    margin-bottom: 0.3rem;
+    width: calc(33.333333% - 0.09rem);
+}
+
+.playlists ul li img {
+    width: 100%;
+}
+
+.playlists ul li p {
+    padding: 6px 2px 0 6px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2;
+    height: 0.566rem;
+    font-size: 0.2355rem;
+    color: #333;
+}
+
+.latestmusic ol li {
+    padding: 0.11rem 0 0.11rem 0.163rem;
+    border-bottom: 0.018rem solid rgba(0, 0, 0, .1);
+    position: relative;
+}
+
+.latestmusic ol li h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.3rem;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.latestmusic ol li p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.217rem;
+    line-height: 1.5;
+    color: #888;
+    display: flex;
+    align-items: center;
+}
+.latestmusic ol li p .sq{
+    margin-left: -0.07rem;
+    margin-right: 0.07rem;
+    width: 0.4rem;
+    height: 0.25rem;
+    fill: rgb(212, 60, 51);
+}
+.latestmusic ol li a {
+    padding: 0 0.181rem;
+    display: block;
+    position: absolute;
+    top: calc(50% - 0.2rem);
+    right: 0;
+}
+.latestmusic ol li a .play{
+    display: block;
+    width: 0.4rem;
+    height: 0.4rem;
+    fill: #aaa;
+}
+
+footer {}
