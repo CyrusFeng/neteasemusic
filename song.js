@@ -37,7 +37,7 @@ $(function () {
     var $play = $('.icon-play');
     var $light = $('.disc-container .disc .light');
     var $cover = $('.disc-container .disc .cover');
-    audio.src = 'http://dl.stream.qqmusic.qq.com/C4000026paSX1I8n5H.m4a?vkey=1698A2779F2B414B1254EA92E49BE06DEC3B9365C3B3000CC3B825DF93FB10ABA7575FB373BBF389C20C43DF5A501A99C5FDEB80994B3443&guid=6038429688&uin=0&fromtag=66';
+    audio.src = '//dl.stream.qqmusic.qq.com/C4000026paSX1I8n5H.m4a?vkey=1698A2779F2B414B1254EA92E49BE06DEC3B9365C3B3000CC3B825DF93FB10ABA7575FB373BBF389C20C43DF5A501A99C5FDEB80994B3443&guid=6038429688&uin=0&fromtag=66';
     audio.oncanplay = function() {
         audio.play();
         $('.disc').addClass('active');
