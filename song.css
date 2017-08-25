@@ -41,10 +41,25 @@
     
     z-index: 0;
 }
-.disc-container .active{
+.disc-container .disc.active .light,
+.disc-container .disc.active .cover{
     animation: circle 20s infinite linear;
 }
-
+.stop{
+      animation-play-state: paused !important;
+    }
+.disc-container .disc .icon{
+    position: absolute;
+    fill:white;
+    display: none;
+    width: 1rem;
+}
+/* .disc-container .disc .icon-pause{
+    display: block;
+}
+.disc-container .disc .icon-play{
+    display: block;
+} */
 .disc-container .disc .ring {
     width: 5.13rem;
 }
@@ -96,7 +111,7 @@
     width: 2.5rem;
     letter-spacing: 0.11rem;
     color: #d43b32;
-    font-size: 0.253rem;
+    font-size: 0.35rem;
 }
 .container .links .download{
     color: #fff;
