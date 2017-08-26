@@ -71,6 +71,13 @@ nav ol li.active span::after {
     width: 100%;
 }
 
+.show>li{
+    display: none;
+}
+.show>li.actived{
+    display: block;
+} 
+
 .playlists {
     margin-top: 0.4rem;
 }
@@ -103,18 +110,21 @@ nav ol li.active span::after {
     color: #333;
 }
 
-.latestmusic .loadinggif{
+.latestmusic .loadinggif {
     text-align: center;
 }
-.latestmusic .loadinggif img{
+
+.latestmusic .loadinggif img {
     display: inline-block;
 }
+
 .latestmusic ol li {
-    padding: 0.11rem 0 0.11rem 0.163rem;
+    padding: 0.11rem 0.8rem 0.11rem 0.163rem;
     border-bottom: 0.018rem solid rgba(0, 0, 0, .1);
     position: relative;
 }
-.latestmusic ol li a{
+
+.latestmusic ol li a {
     color: #333;
 }
 
@@ -197,4 +207,98 @@ footer .copyright {
     font-size: 0.2174rem;
     line-height: 0.29rem;
     transform: scale(.75);
+}
+
+.hotmusic .head {
+    background: url(http://ov85hovft.bkt.clouddn.com/hot_music_bg_3x.jpg) no-repeat center center;
+    background-size: cover;
+    height: 2.91rem;
+}
+
+
+/* .hotmusic .head .wrapper .hotsingsimg{
+    background: url(http://ov85hovft.bkt.clouddn.com/index_icon_3x.png) no-repeat right bottom;
+    background-size: 3rem 1.416rem;
+    width: 2.5725rem;
+    height: 1.2138rem;
+} */
+
+.hotmusic .head .wrapper {
+    padding-left: 20px;
+    padding-top: 30px;
+}
+
+.hotmusic .head .wrapper .hotsingsimg {
+    background: url(http://ov85hovft.bkt.clouddn.com/index_icon_3x.png) no-repeat;
+    background-position: -0.41667rem -0.45rem;
+    background-size: 3rem 1.85rem;
+    width: 2.5725rem;
+    height: 1.4rem;
+}
+
+.hotmusic .head .wrapper .updatetime {
+    padding-top: 6px;
+    font-size: 0.2174rem;
+    color: hsla(0, 0%, 100%, .8);
+}
+
+.hotmusic .loadinggif {
+    text-align: center;
+}
+
+.hotmusic .loadinggif img {
+    display: inline-block;
+}
+
+.hotmusic ol li {
+    padding: 0.11rem 0.8rem 0.11rem 0.163rem;
+    border-bottom: 0.018rem solid rgba(0, 0, 0, .1);
+    position: relative;
+}
+
+.hotmusic ol li a {
+    color: #333;
+}
+
+.hotmusic ol li h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.3rem;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.hotmusic ol li p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.217rem;
+    line-height: 1.5;
+    color: #888;
+    display: flex;
+    align-items: center;
+}
+
+.hotmusic ol li p .sq {
+    margin-left: -0.07rem;
+    margin-right: 0.07rem;
+    width: 0.4rem;
+    height: 0.25rem;
+    fill: rgb(212, 60, 51);
+}
+
+.hotmusic ol li .play {
+    padding: 0 0.181rem;
+    display: block;
+    position: absolute;
+    top: calc(50% - 0.2rem);
+    right: 0;
+}
+
+.hotmusic ol li a .play {
+    display: block;
+    width: 0.4rem;
+    height: 0.4rem;
+    fill: #aaa;
 }
