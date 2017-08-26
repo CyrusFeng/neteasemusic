@@ -1,4 +1,43 @@
 $(function () {
+
+    var audio = document.createElement('audio');
+    var $pause = $('.icon-pause');
+    var $play = $('.icon-play');
+    var $light = $('.disc-container .disc .light');
+    var $cover = $('.disc-container .disc .cover');
+    
+  
+    $play.css('display','block');
+
+    $pause.on('click',function() {
+        audio.pause();
+        $pause.css('display','none');
+        $play.css('display','block');
+        $light.addClass('stop');
+        $cover.addClass('stop');
+    })
+    $play.on('click',function() {
+        audio.play();
+        $('.disc').addClass('active');
+
+        $play.css('display','none');
+        $pause.css('display','block');
+        $light.removeClass('stop');
+        $cover.removeClass('stop');
+    })
+    let id = location.search.match(/\bid=([^&])*/)[1];
+    var $title = $('.description .title');
+    $.get('songs.json').then(function(response) {
+        response.forEach(function(item) {
+            if (id == item.id) {   
+                audio.src = item.url;
+                $title.text(item.name);
+            }
+        }, this);
+    })
+
+    
+
     $.get("/lyric.json").then(function (response) {
         let lrc = response.lrc.lyric; // 英文歌词
         let {
@@ -32,29 +71,5 @@ $(function () {
         })
     })
 
-    var audio = document.createElement('audio');
-    var $pause = $('.icon-pause');
-    var $play = $('.icon-play');
-    var $light = $('.disc-container .disc .light');
-    var $cover = $('.disc-container .disc .cover');
-    audio.src = '//dl.stream.qqmusic.qq.com/C4000026paSX1I8n5H.m4a?vkey=1698A2779F2B414B1254EA92E49BE06DEC3B9365C3B3000CC3B825DF93FB10ABA7575FB373BBF389C20C43DF5A501A99C5FDEB80994B3443&guid=6038429688&uin=0&fromtag=66';
-  
-    $play.css('display','block');
-
-    $pause.on('click',function() {
-        audio.pause();
-        $pause.css('display','none');
-        $play.css('display','block');
-        $light.addClass('stop');
-        $cover.addClass('stop');
-    })
-    $play.on('click',function() {
-        audio.play();
-        $('.disc').addClass('active');
-
-        $play.css('display','none');
-        $pause.css('display','block');
-        $light.removeClass('stop');
-        $cover.removeClass('stop');
-    })
+    
 })

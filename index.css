@@ -103,10 +103,19 @@ nav ol li.active span::after {
     color: #333;
 }
 
+.latestmusic .loadinggif{
+    text-align: center;
+}
+.latestmusic .loadinggif img{
+    display: inline-block;
+}
 .latestmusic ol li {
     padding: 0.11rem 0 0.11rem 0.163rem;
     border-bottom: 0.018rem solid rgba(0, 0, 0, .1);
     position: relative;
+}
+.latestmusic ol li a{
+    color: #333;
 }
 
 .latestmusic ol li h3 {
@@ -128,25 +137,64 @@ nav ol li.active span::after {
     display: flex;
     align-items: center;
 }
-.latestmusic ol li p .sq{
+
+.latestmusic ol li p .sq {
     margin-left: -0.07rem;
     margin-right: 0.07rem;
     width: 0.4rem;
     height: 0.25rem;
     fill: rgb(212, 60, 51);
 }
-.latestmusic ol li a {
+
+.latestmusic ol li .play {
     padding: 0 0.181rem;
     display: block;
     position: absolute;
     top: calc(50% - 0.2rem);
     right: 0;
 }
-.latestmusic ol li a .play{
+
+.latestmusic ol li a .play {
     display: block;
     width: 0.4rem;
     height: 0.4rem;
     fill: #aaa;
 }
 
-footer {}
+footer {
+    background: url(http://s3.music.126.net/m/s/img/recommand_bg_3x.png?f3a9aaa781c3bf3b543d129327d35fce) no-repeat center top;
+    background-size: cover;
+}
+
+footer .logo {
+    padding-top: 1.259rem;
+}
+
+footer .logo .logosvg {
+    display: block;
+    margin: 0 auto;
+    width: 4.1666rem;
+    height: 0.797rem;
+}
+
+footer .openapp {
+    margin: 0.27rem auto 0.09rem;
+    display: block;
+    border: 0.018rem solid rgb(211, 58, 49);
+    border-radius: 0.6884rem;
+    width: 6.16rem;
+    height: 0.725rem;
+    font-size: 0.29rem;
+    line-height: 0.6884rem;
+    text-align: center;
+    color: #d33a31;
+}
+
+footer .copyright {
+    padding-bottom: 0.7rem;
+    text-align: center;
+    color: #888;
+    font-size: 0.2174rem;
+    line-height: 0.29rem;
+    transform: scale(.75);
+}
