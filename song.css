@@ -19,6 +19,17 @@
     background: transparent no-repeat center center;
     background-size: cover;
 }
+/* .container::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+} */
 
 .disc-container {}
 
@@ -107,10 +118,17 @@
     height: 1.3rem;
     overflow: hidden;
 }
+.description .lyric .lines{
+    transition: transform 0.3s;
+    transform: translateY(0.434783rem);
+}
 
 .description p {
-    font-size: 0.253rem;
+    font-size: 0.29rem;
     line-height: 0.435rem;
+}
+.description p.active{
+    color: #fff;
 }
 
 .container .links {

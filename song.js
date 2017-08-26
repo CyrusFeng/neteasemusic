@@ -7,6 +7,8 @@ $(function () {
     var $cover = $('.disc-container .disc .cover');
     var $container = $('.container');
     var $title = $('.description .title');
+    var $lines = $('.lines');
+    // $lines.css('transform',`translateY(${$('.lyric').height()/3}px)`);
 
     let id = location.search.match(/\bid=([^&])*/)[1];
 
@@ -26,7 +28,7 @@ $(function () {
                 } = item;
 
                 initPlayer(url);
-                
+
                 $cover.attr('src', imgurl);
                 $container.css('background-image', 'url(' + imgbgurl + ')');
 
@@ -44,7 +46,7 @@ $(function () {
 
     /* 解析歌词 以回车符号为分割点 */
     function parseLyric(lyric) {
-        
+
         arr = lyric.split('\n');
         let regex = /^\[(.+)\](.*)$/;
         arr = arr.map(function (string) {
@@ -74,6 +76,7 @@ $(function () {
 
     function initPlayer(url) {
         var audio = document.createElement('audio');
+        var id;
 
         audio.src = url;
 
@@ -85,6 +88,7 @@ $(function () {
             $play.css('display', 'block');
             $light.addClass('stop');
             $cover.addClass('stop');
+            clearInterval(id);
         })
         $play.on('click', function () {
             audio.play();
@@ -94,9 +98,41 @@ $(function () {
             $pause.css('display', 'block');
             $light.removeClass('stop');
             $cover.removeClass('stop');
+
+            id = setInterval(function () {
+                var seconds = audio.currentTime;
+                var minutes = ~~(seconds / 60);
+                var left = seconds - minutes * 60;
+                var time = `${pad(minutes)}:${pad(left)}`;
+
+                var $currrntLine;
+
+
+                var $p = $('.lines p');
+                for (var i = 0; i < $p.length; i++) {
+                    var currrntLineTime = $p.eq(i).attr('data-time');
+                    var nextLineTime = $p.eq(i + 1).attr('data-time');
+                    if ($p.eq(i + 1).length !== 0 && time >= currrntLineTime && time < nextLineTime) {
+                        $currrntLine = $p.eq(i);
+                        break;
+                    }
+                }
+                if ($currrntLine) {
+                    $currrntLine.addClass('active').prev().removeClass('active');
+                    var linesTop = $lines.offset().top;
+                    var currTop = $currrntLine.offset().top;
+                    var diff = currTop - linesTop - $('.lyric').height() / 3;
+                    $lines.css('transform', `translateY(-${diff}px)`);
+                }
+            }, 1000)
         })
+
+
     }
 
+    function pad(number) {
+        return number >= 10 ? '' + number : '0' + number;
+    }
     // $.get("/lyric.json").then(function (response) {
     //     let lrc = response.lrc.lyric; // 英文歌词
     //     let {
