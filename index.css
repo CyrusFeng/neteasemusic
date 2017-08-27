@@ -71,12 +71,13 @@ nav ol li.active span::after {
     width: 100%;
 }
 
-.show>li{
+.show>li {
     display: none;
 }
-.show>li.actived{
+
+.show>li.actived {
     display: block;
-} 
+}
 
 .playlists {
     margin-top: 0.4rem;
@@ -251,16 +252,27 @@ footer .copyright {
 }
 
 .hotmusic ol li {
-    padding: 0.11rem 0.8rem 0.11rem 0.163rem;
+    padding: 0.11rem 0.8rem 0.11rem 0;
     border-bottom: 0.018rem solid rgba(0, 0, 0, .1);
     position: relative;
 }
 
+.hotmusic ol li .number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    font-size: 17px;
+    color: #999;
+}
+
 .hotmusic ol li a {
+    display: flex;
     color: #333;
 }
 
 .hotmusic ol li h3 {
+    width: 6rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
