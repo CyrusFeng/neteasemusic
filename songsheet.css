@@ -1,6 +1,14 @@
-body{
+ html,body{
+    height: 100%;
+} 
+.parent{
     display: flex;
     flex-direction: column;
+    height: 100vh;
+}
+.scroll{
+    flex: 1;
+    overflow: auto;
 }
 header .bg {
     position: relative;
@@ -81,9 +89,6 @@ header .h_body a .name {
     color: hsla(0, 0%, 100%, .7);
 }
 
-main{
-    flex: 1;
-}
 main .intro .label {
     display: flex;
     align-items: center;
@@ -216,4 +221,18 @@ main .list .title{
     width: 0.4rem;
     height: 0.4rem;
     fill: #aaa;
+}
+
+footer{
+    height: 54px;
+}
+footer .footer-wrap{
+    margin: 7px auto;
+    width: 354px;
+}
+footer .footer-wrap .collection{
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
 }
