@@ -101,6 +101,7 @@
 
  main .intro {
      padding: 12px;
+     position: relative;
  }
 
  main .intro .label {
@@ -139,10 +140,22 @@
  main .intro .intro_text .toggle {
      margin-left: -0.07rem;
      margin-right: 0.07rem;
-     width: 0.4rem;
+     
+     position: absolute;
+     bottom: 8px;
+     right: 3px;
+ }
+     main .intro .intro_text .toggle .icondown{
+        width: 0.4rem;
      height: 0.25rem;
      fill: black;
- }
+     }
+     main .intro .intro_text .toggle .iconup{
+         display: none;
+        width: 0.4rem;
+     height: 0.25rem;
+     fill: black;
+     }
 
  main .list .title {
      height: 23px;
@@ -226,9 +239,7 @@
      fill: #aaa;
  }
 
- footer {
-     
- }
+ footer {}
 
  footer .footer-wrap {
      margin: 7px 30px;
