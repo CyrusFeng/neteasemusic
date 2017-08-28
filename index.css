@@ -42,7 +42,7 @@ header a {
 
 nav ol {
     display: flex;
-    border-bottom: 0.018rem solid #ccc;
+    border-bottom: 0.018115rem solid rgba(0, 0, 0, 0.1);
 }
 
 nav ol li {
@@ -316,31 +316,32 @@ footer .copyright {
 }
 
 .search form {
-        padding: 15px 10px;
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .search form .inputcover {
-        background: #ebecec;
+    background: #ebecec;
     border-radius: 30px;
-       
     display: flex;
     align-items: center;
     position: relative;
     font-size: 14px;
 }
 
-.search form .inputcover .icon-common{
+.search form .inputcover .icon-common {
     display: inline-block;
     margin: 0 8px;
     font-size: 0;
-        
 }
-.search form .inputcover .icon-sousuo .icon{
+
+.search form .inputcover .icon-sousuo .icon {
     display: inline-block;
     width: 14px;
-    height: 14px;      
+    height: 14px;
 }
-.search form .inputcover .icon-cancel .icon{
+
+.search form .inputcover .icon-cancel .icon {
     display: inline-block;
     width: 15px;
     height: 15px;
@@ -357,9 +358,86 @@ footer .copyright {
     color: #c9c9c9;
     background: transparent;
 }
-.search form .inputcover input{
+
+.search form .inputcover input {
     height: 30px;
-     width: 100%;
-     border: 0;
-         background: transparent;
+    width: 100%;
+    border: 0;
+    background: transparent;
+}
+
+.search .hotsearch {
+    padding: 15px 10px 0;
+}
+
+.search .hotsearch .title {
+    font-size: 12px;
+    line-height: 12px;
+    color: #666;
+}
+
+.search .hotsearch .list {
+    margin: 10px 0 7px;
+    font-size: 0;
+}
+
+.search .hotsearch .list .item {
+    display: inline-block;
+    height: 32px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    padding: 0 14px;
+    font-size: 14px;
+    line-height: 32px;
+    border: 1px solid rgba(211, 212, 218, 0.3);
+    border-radius: 60px;
+}
+
+.search .hotsearch .list .item a {
+    color: #333;
+}
+
+.search .history {}
+
+.search .history .list {}
+
+.search .history .list .item {
+    display: flex;
+    align-items: center;
+    font-size: 0;
+}
+
+.search .history .list .item .head {
+    margin: 0 10px;
+    font-size: 0;
+}
+
+.search .history .list .item .head .icon {
+    width: 18px;
+    height: 18px;
+    fill: rgba(51, 51, 51, 0.4);
+}
+
+.search .history .list .item .body {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    height: 45px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.search .history .list .item .body .name {
+    flex-grow: 1;
+    font-size: 14px;
+    color: rgb(51, 51, 51);
+}
+
+.search .history .list .item .body .x {
+    margin-right: 16px;
+}
+
+.search .history .list .item .body .icon {
+    width: 18px;
+    height: 18px;
+    fill: rgba(51, 51, 51, 0.4);
 }
