@@ -314,3 +314,52 @@ footer .copyright {
     height: 0.4rem;
     fill: #aaa;
 }
+
+.search form {
+        padding: 15px 10px;
+}
+
+.search form .inputcover {
+        background: #ebecec;
+    border-radius: 30px;
+       
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 14px;
+}
+
+.search form .inputcover .icon-common{
+    display: inline-block;
+    margin: 0 8px;
+    font-size: 0;
+        
+}
+.search form .inputcover .icon-sousuo .icon{
+    display: inline-block;
+    width: 14px;
+    height: 14px;      
+}
+.search form .inputcover .icon-cancel .icon{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+}
+
+.search form .inputcover .holder {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-15px);
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    color: #c9c9c9;
+    background: transparent;
+}
+.search form .inputcover input{
+    height: 30px;
+     width: 100%;
+     border: 0;
+         background: transparent;
+}
