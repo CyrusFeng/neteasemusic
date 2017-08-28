@@ -43,7 +43,7 @@ $(function () {
         }
         if (index === 1) {
             $.get("/songs.json").then(function (response) {
-                response.forEach(function (item,i) {
+                response.forEach(function (item, i) {
                     let $li = $(`
             <li>
             <a href="song.html?id=${item.id}">
@@ -67,16 +67,28 @@ $(function () {
             </li>
             `);
                     $('.hotmusic ol').append($li);
-                //     $songlist = $('.hotmusic ol li');
-                //  $('.hotmusic ol li .number').text($songlist.eq(i));
+                    //     $songlist = $('.hotmusic ol li');
+                    //  $('.hotmusic ol li .number').text($songlist.eq(i));
                 }, this);
                 $('.loadinggif').remove();
 
-                 $tablist.eq(index).attr('data-downloaded','yes');
-                 
+                $tablist.eq(index).attr('data-downloaded', 'yes');
+
             })
-        } else if(index === 1){
-            
+        } else if (index === 2) {
+            var $search = $('.search form .inputcover #search');
+            var $holder = $('.search form .inputcover .holder');
+            var $cancel = $('.search form .inputcover .icon-cancel');
+            $cancel.css('visibility','hidden');
+            $search.on('input',function() {
+                $holder.css('display','none');
+                $cancel.css('visibility','visible');
+            })
+            $cancel.on('click',function() {
+                $search.val('');
+                $cancel.css('visibility','hidden');
+                $holder.css('display','block');
+            })
         }
     })
 })
